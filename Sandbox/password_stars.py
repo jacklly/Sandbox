@@ -1,5 +1,5 @@
 def main():
-    """Password checking"""
+    """Password print"""
     Psw = "0"
     Psw = get_password(Psw)
 
@@ -7,6 +7,7 @@ def main():
     print("Your password is: ", PswLen * "*")
 
 def get_password(Psw):
+    """Passwaord checker"""
     Psw = input("What would you like to set your password as? (Min. 5 characters)")
     while len(Psw) < 5:
         print("Please enter a longer password!")
