@@ -13,7 +13,6 @@ def score_returner(score):
 
 
 def random_scorer():
-    score = 0
     score = random.randint(1, 99)
     print("The random score was: ", score)
     score_returner(score)
@@ -22,7 +21,6 @@ def random_scorer():
 def defined_scorer():
     score = int(input("What was your score? (1-99)"))
     while score < 1 or score > 99:
-        score = 0
         print("Invalid input")
         score = int(input("What was your score?"))
     score_returner(score)
