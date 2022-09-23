@@ -1,6 +1,7 @@
-def main():
-    score = 0
-    score = score_getter(score)
+import random
+
+
+def score_returner(score):
     if score > 100 or score < 0:
         print("Invalid score")
     elif score >= 90:
@@ -11,9 +12,22 @@ def main():
         print("Bad score")
 
 
-def score_getter(score):
-    score = int(input("Enter score: "))
-    return score
+def random_scorer():
+    score = 0
+    score = random.randint(1, 99)
+    print("The random score was: ", score)
+    score_returner(score)
 
 
-main()
+def defined_scorer():
+    score = int(input("What was your score? (1-99)"))
+    while score < 1 or score > 99:
+        score = 0
+        print("Invalid input")
+        score = int(input("What was your score?"))
+    score_returner(score)
+
+
+random_scorer()
+
+defined_scorer()
